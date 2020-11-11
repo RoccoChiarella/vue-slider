@@ -17,8 +17,7 @@
                     <img :src="immagini[indice_immagine]">
                     <div class="bullets">
                         <i v-for="(immagine, indice) in immagini"
-                            v-bind:class="indice == indice_immagine ? 'active' : null"
-                            class="fas fa-circle"></i>
+                            v-bind:class="indice == indice_immagine ? 'active' : null" @click="click_pallino(indice)" class="fas fa-circle"></i>
                     </div>
                 </div>
                 <div class="next">

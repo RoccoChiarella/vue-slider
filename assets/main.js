@@ -22,7 +22,13 @@ var app = new Vue(
                 if(this.indice_immagine < 0) {
                     this.indice_immagine = this.immagini.length - 1;
                 }
+            },
+            click_pallino(indice_pallino) {
+                this.indice_immagine = indice_pallino;
             }
+        },
+        created: function() {
+            setInterval(this.next_image, 3000);
         }
     }
 );
